@@ -1,0 +1,9 @@
+.product-title {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #c60f0f;
+}

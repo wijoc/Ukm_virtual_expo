@@ -28,14 +28,20 @@ class Welcome extends MY_Controller {
 	}
 
 	public function storeListPage(){
-		$this->pageData['title'] = 'Stream | Rembang Expo';
+		$this->pageData['title'] = 'Toko | Rembang Expo';
 		$this->page = "visitor/store_list_content";
 		$this->visitor_layout();
 	}
 
 	public function productListPage(){
-		$this->pageData['title'] = 'Stream | Rembang Expo';
+		$this->pageData['title'] = 'Produk | Rembang Expo';
 		$this->page = "visitor/product_list_content";
+		$this->visitor_layout();
+	}
+
+	public function productDetailPage(){
+		$this->pageData['title'] = 'Produk | Rembang Expo';
+		$this->page = "visitor/product_detail_content";
 		$this->visitor_layout();
 	}
 }

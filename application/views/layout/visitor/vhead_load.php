@@ -17,3 +17,6 @@
 
     <!-- page stream list css -->
         <link rel="stylesheet" href="<?php echo base_url() ?>assets/visitor/css/stream_list_page.css" >
+
+    <!-- page product detail css -->
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/visitor/css/product_detail_page.css" >

@@ -47,7 +47,7 @@
                                 <td><?php echo $showKtgr['ktgr_nama']; ?></td>
                                 <td class="text-center">
                                   <a class="btn btn-xs btn-warning edit-ktgr" data-toggle="modal" data-target="#modal-edit-kategori" data-id="<?php echo urlencode(base64_encode($showKtgr['ktgr_id'])) ?>" data-name="<?php echo $showKtgr['ktgr_nama'] ?>"><i class="fas fa-edit"></i></a>
-                                  <a href="<?php echo site_url('Admin_c/hapusKategori').'/'.urlencode(base64_encode($showKtgr['ktgr_id'])) ?>" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="top" title="Hapus Kategori"><i class="fas fa-trash"></i></a>
+                                  <a class="btn btn-xs btn-danger" onclick="confirmDelete('ktgr', '<?php echo urlencode(base64_encode($showKtgr['ktgr_id'])) ?>', '<?php echo site_url('Admin_c/hapusKategoriProses') ?>')" data-toggle="tooltip" data-placement="top" title="Hapus Kategori"><i class="fas fa-trash"></i></a>
                                 </td>
                               </tr>
                           <?php endforeach; } else { ?>

@@ -1,15 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends MY_Controller {
+class Visitor_c extends MY_Controller {
 
 	public function index(){
-		$this->pageData['title'] = 'Page Title';
-		$this->page = "sample_content";
-		$this->admin_layout();
-	}
-
-	public function homePage(){
 		$this->pageData['title'] = 'Rembang Expo';
 		$this->page = "visitor/home_content";
 		$this->visitor_layout();

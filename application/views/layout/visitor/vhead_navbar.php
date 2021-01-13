@@ -18,16 +18,16 @@
                                 </button>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="">Home </a>
+                                <a class="nav-link active" href="<?php echo site_url('Visitor_c') ?>">Home </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="">Pameran</a>
+                                <a class="nav-link" href="<?php echo site_url('Visitor_c/expoCategoryPage') ?>">Pameran</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo site_url('Visitor/allStreamPage') ?>">Stream</a> 
+                                <a class="nav-link" href="<?php echo site_url('Visitor_c/streamListPage') ?>">Stream</a> 
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="">Login</a>
+                                <a class="nav-link" href="<?php echo site_url('Visitor_c/') ?>">Login</a>
                             </li>
                             <li class="nav-item pl-4 pl-lg-0">
                                 <img src="<?php echo base_url() ?>assets/expo_img/logo_jateng_gayeng.png" alt="" width="137" height="50">

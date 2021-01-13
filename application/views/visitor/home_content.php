@@ -11,7 +11,9 @@
             </div>    
                 <hr class="col-7">
                 <div>
-                    <button class="col-lg-5 btn btn-opacity-info mr-1"><b>Lihat Pameran</b></button>
+                    <a class="col-lg-5 btn btn-opacity-info mr-1" href="<?php echo site_url('Visitor_c/expoCategoryPage') ?>">
+                        <b>Lihat Pameran</b>
+                    </a>
                 </div>
           </div>
           <div class="col-12 col-lg-5 p-0 img-digital grid-margin grid-margin-lg-0" data-aos="fade-left">

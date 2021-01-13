@@ -35,7 +35,7 @@
                     <div class="form-group row">
                       <label for="inputTokoNama" class="col-sm-3 col-form-label">Nama Toko<a class="float-right"> : </a></label>
                       <div class="col-sm-8">
-                        <input type="text" class="form-control float-right" name="postTokoNama" id="inputTokoNama" placeholder="Masukan nama toko">
+                        <input type="text" class="form-control float-right" name="postTokoNama" id="inputTokoNama" placeholder="Masukan nama toko" required>
                       </div>
                     </div>
 
@@ -43,7 +43,7 @@
                     <div class="form-group row">
                         <label for="inputTokoOwner" class="col-sm-3 col-form-label">Owner Toko<a class="float-right"> : </a></label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control float-right" name="postTokoOwner" id="inputTokoOwner" placeholder="Masukan nama owner toko">
+                            <input type="text" class="form-control float-right" name="postTokoOwner" id="inputTokoOwner" placeholder="Masukan nama owner toko" required>
                         </div>
                     </div>
 
@@ -59,8 +59,8 @@
                     <div class="form-group row">
                       <label for="inputTokoKategori" class="col-sm-3 col-form-label">Kategori <a class="float-right"> : </a></label>
                       <div class="col-sm-8">
-                        <select class="form-control float-right" name="postTokoKategori" id="inputTokoKategori">
-                          <option> -- Pilih Isi -- </option>
+                        <select class="form-control float-right" name="postTokoKategori" id="inputTokoKategori" required>
+                          <option value=""> -- Pilih Kategori -- </option>
                           <?php foreach($dataKategori as $optKtgr): ?>
                           <option value="<?php echo urlencode(base64_encode($optKtgr['ktgr_id'])) ?>"> <?php echo $optKtgr['ktgr_nama'] ?> </option>
                           <?php endforeach; ?> 

@@ -10,6 +10,10 @@ function confirmDelete(item, getid, url, msg){
 			var warningMsg = "Penghapusan data bersifat permanen !  Menghapus data toko akan menghapus semua produk pada toko ini !";
 			var cancelMsg  = "Batal menghapus data toko !";
 			break;
+		case "hard-prd":
+			var warningMsg = "Penghapusan data bersifat permanen !  Data produk yang terhapus tidak bisa dipulihkan !";
+			var cancelMsg  = "Batal menghapus data produk !";
+			break;
 		default :
 			var warningMsg = msg;
 			var cancelMsg  = "Batal menghapus data !";

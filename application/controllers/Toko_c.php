@@ -36,7 +36,7 @@ Class Toko_c extends MY_Controller {
             $this->admin_layout();
         }
 
-    /** Hapus data toko */
+    /** HalamanEdit data toko */
       function editToko($encoded_id){
         $tokoID = base64_decode(urldecode($encoded_id));
         $this->pageData = array(
@@ -178,7 +178,7 @@ Class Toko_c extends MY_Controller {
         
       }
 
-    /** Hapus data kategori */
+    /** Hapus data toko */
       function hapusTokoProses(){
         $tokoID = base64_decode(urldecode($this->input->post("postID")));
         $resultDel = $this->Toko_m->deleteToko($tokoID);

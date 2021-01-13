@@ -34,6 +34,11 @@
 		<script src="<?php echo base_url() ?>assets/dist/js/pages/admin_toko.js"></script>
 	<?php } ?>
 
+	<!-- Page tambah produk -->
+	<?php if(in_array('tambah_prd_page',$assets)){ ?>
+		<script src="<?php echo base_url() ?>assets/dist/js/pages/admin_prd.js"></script>
+	<?php } ?>
+
 	<!-- Page Konfirmasi Delete -->
 	<?php if(in_array('func_confirm', $assets)){ ?>
 		<script type="text/javascript" src="<?php echo base_url() ?>assets/dist/js/pages/f_confirm.js"></script>

@@ -28,6 +28,7 @@
                 <a class="float-right btn btn-sm btn-success" data-toggle="modal" data-target="#modal-tambah-kategori"><i class="fas fa-plus"></i> Kategori baru</a>
               </div>
               <div class="card-body">
+                <div id="alert-kategori"></div>
                 <div class="table-responsive">
                     <table class="table table-bordered" id="table-kategori">
                         <thead class="text-center">

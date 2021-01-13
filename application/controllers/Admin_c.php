@@ -56,8 +56,6 @@ Class Admin_c extends MY_Controller {
                 }
 
                 redirect('Admin_c/dataKategori');
-
-                //print("<pre>".print_r($dataPost, true)."</pre>");
         }
 
       /** Edit data kategori */
@@ -73,10 +71,14 @@ Class Admin_c extends MY_Controller {
             /* Kirim ke model untuk simpan ke database */
                 $resultEdit = $this->Kategori_m->updateKategori($dataPost, $ktgrID);
 
-            /* Redirect 
-                if($resultInput > 0){
-                    
-                }*/
+            /** Redirect */ 
+                if($resultEdit > 0){
+                    $this->session->set_flashdata('flashStatus', 'successUpdate');
+                    $this->session->set_flashdata('flashMsg', 'Berhasil mengubah data kategori !');
+                } else {
+                    $this->session->set_flashdata('flashStatus', 'failedUpdate');
+                    $this->session->set_flashdata('flashMsg', 'Gagal mengubah data kategori !');
+                }
 
                 redirect('Admin_c/dataKategori');
         }

@@ -6,6 +6,10 @@ function confirmDelete(item, getid, url, msg){
 			var warningMsg = "Penghapusan data bersifat permanen !  Menghapus data kategori akan mengubah detail data toko dengan kategori ini !";
 			var cancelMsg  = "Batal menghapus data kategori !";
 			break;
+		case "hard-toko":
+			var warningMsg = "Penghapusan data bersifat permanen !  Menghapus data toko akan menghapus semua produk pada toko ini !";
+			var cancelMsg  = "Batal menghapus data toko !";
+			break;
 		default :
 			var warningMsg = msg;
 			var cancelMsg  = "Batal menghapus data !";
@@ -22,7 +26,7 @@ function confirmDelete(item, getid, url, msg){
 
     /* Fire sweetAlert untuk konfirmasi */
     swalWithBootstrapButtons.fire({
-        title: 'ANDA YAKIN MENGHAPUS DATA A ?',
+        title: 'ANDA YAKIN MENGHAPUS DATA ?',
         text: warningMsg,
         icon: 'warning',
         showCancelButton: true,

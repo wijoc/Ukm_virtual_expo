@@ -1,9 +1,4 @@
 $(document).ready(function(){
-    /** Datatable */
-    $("#table-kategori").DataTable({
-        "responsive": true,
-        "autoWidth": false,
-    });
 
     /** Tombol edit kategori */
     $("#table-kategori tbody").on("click", ".edit-ktgr", function(){

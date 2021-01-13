@@ -12,6 +12,12 @@
 		<script src="<?php echo base_url() ?>assets/plugins/datatables/jquery.dataTables.min.js"></script>
 		<script src="<?php echo base_url() ?>assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 		<script src="<?php echo base_url() ?>assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+		<script>
+			$(".table").DataTable({
+				"responsive": true,
+				"autoWidth": false,
+			});
+		</script>
 	<?php } ?>
 
 	<!-- SweetAlert 2 -->
@@ -22,6 +28,11 @@
 <!-- additional Page script goes here -->
 	<!-- Page Data Kategori -->
 		<script src="<?php echo base_url() ?>assets/dist/js/pages/admin_ktgr.js"></script>
+
+	<!-- Page tambah toko -->
+	<?php if(in_array('tambah_toko_page',$assets)){ ?>
+		<script src="<?php echo base_url() ?>assets/dist/js/pages/admin_toko.js"></script>
+	<?php } ?>
 
 	<!-- Page Konfirmasi Delete -->
 	<?php if(in_array('func_confirm', $assets)){ ?>

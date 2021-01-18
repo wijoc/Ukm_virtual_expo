@@ -27,22 +27,22 @@ Class Produk_c extends MY_Controller {
     }
 
     /** Halaman tampil produk berdasar toko */
-        public function dataProdukonToko($encoded_toko_id){
-            /* Data yang akan dikirim ke view */
-            $this->pageData = array(
-                'title'  => 'Data Toko | Rembang Expo',
-                'assets' => array('datatables', 'sweetalert2', 'func_confirm'),
-                'tokoID' => $encoded_toko_id,
-                'namaToko' => $this->Toko_m->getTokoOnID(base64_decode(urldecode($encoded_toko_id))),
-                'dataProduk' => $this->Produk_m->getProdukOnToko(base64_decode(urldecode($encoded_toko_id)))
-            ); 
+    public function dataProdukonToko($encoded_toko_id){
+        /* Data yang akan dikirim ke view */
+        $this->pageData = array(
+            'title'  => 'Data Toko | Rembang Expo',
+            'assets' => array('datatables', 'sweetalert2', 'func_confirm'),
+            'tokoID' => $encoded_toko_id,
+            'namaToko' => $this->Toko_m->getTokoOnID(base64_decode(urldecode($encoded_toko_id))),
+            'dataProduk' => $this->Produk_m->getProdukOnToko(base64_decode(urldecode($encoded_toko_id)))
+        ); 
 
-            /* View file */
-            $this->page = "admin/data_produk_on_toko_v";
+        /* View file */
+        $this->page = "admin/data_produk_on_toko_v";
 
-            /* Call function layout dari MY_Controller Class */
-            $this->admin_layout();
-        }
+        /* Call function layout dari MY_Controller Class */
+        $this->admin_layout();
+    }
 
     /** Halaman tambah produk */
         public function tambahProduk($encoded_toko_id){
@@ -65,6 +65,7 @@ Class Produk_c extends MY_Controller {
             $this->page = "admin/edit_produk_v";
             $this->admin_layout();
         }
+<<<<<<< HEAD
     
     /** Detail Produk */
         public function detailProduk($encoded_toko_id, $encoded_prd_id){
@@ -83,6 +84,8 @@ Class Produk_c extends MY_Controller {
             /* Call function layout dari MY_Controller Class */
             $this->admin_layout();
         }
+=======
+>>>>>>> c19e16cc2ccdc2f284765dd4ab24fdc38e64df4e
 
     /** Proses tambah produk */
         function tambahProdukProses(){

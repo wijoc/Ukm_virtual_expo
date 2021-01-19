@@ -27,21 +27,23 @@ Class Stream_m extends CI_Model {
 		return $resultSelect->result_array();
 	}
 	  
-  /* Select 3 data berdasar toko */
-	function getTigaProdukOnToko($toko_id){
-		$this->db->select('ptb.*, ttb.toko_nama');
-		$this->db->from($this->tb.' as ptb');
-		$this->db->join('tb_toko as ttb', 'ttb.toko_id=ptb.'.$this->f[2]);
-		$this->db->where('ptb.'.$this->f[2], $toko_id);
-		$this->db->limit(3);
-		$this->db->order_by('ptb.'.$this->f[3], 'DESC');
-		$resultSelect = $this->db->get();
+  /* Select data stream hari ini */
+	function getTodayStream($day){
+		$this->db->where($this->f[3], $day);
+		$resultSelect = $this->db->get($this->tb);
 		return $resultSelect->result_array();
 	}
 	  
-  /* Select data produk berdasar ID */
-	function getProdukOnID($prd_id){
-		$this->db->where($this->f[0], $prd_id);
+  /* Select data stream sebelumnya */
+	function getPastStream(){
+		$this->db->where($this->f[3].' < DATE(NOW())');
+		$resultSelect = $this->db->get($this->tb);
+		return $resultSelect->result_array();
+	}
+	  
+  /* Select data stream selanjutnya */
+	function getNextStream(){
+		$this->db->where($this->f[3].' > DATE(NOW())');
 		$resultSelect = $this->db->get($this->tb);
 		return $resultSelect->result_array();
 	}

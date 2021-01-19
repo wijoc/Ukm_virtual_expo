@@ -8,6 +8,7 @@ class Visitor_c extends MY_Controller {
         $this->load->model('Kategori_m');
         $this->load->model('Toko_m');
         $this->load->model('Produk_m');
+        $this->load->model('Stream_m');
 	}
 
 	public function index(){
@@ -37,7 +38,16 @@ class Visitor_c extends MY_Controller {
 	}
 
 	public function streamListPage(){
-		$this->pageData['title'] = 'Stream | Rembang Expo';
+		/** get tanggal hari ini */
+		$today = date('Y-m-d');
+		
+		$this->pageData = array(
+			'title' => 'Stream | Rembang Expo',
+			'allStream' => $this->Stream_m->getSemuaStream(),
+			'todayStream' => $this->Stream_m->getTodayStream($today),
+			'pastStream' => $this->Stream_m->getPastStream(),
+			'nextStream' => $this->Stream_m->getNextStream()
+		);
 		$this->page = "visitor/stream_content";
 		$this->visitor_layout();
 	}

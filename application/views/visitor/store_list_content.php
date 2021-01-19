@@ -1,27 +1,28 @@
 <div class="banner" >
     <div class="container">
       <div class="row">
-        <?php foreach($dataToko as $showToko): ?>
+        <?php
+          if(count($dataToko) > 0){ 
+            foreach($dataToko as $showToko): ?>
             <div class="col-lg-4 col-md-6 mt-2" data-aos="zoom-in">
                 <div class="card border border-dark border-rounded">
                     <div class="card-header">
                         <h5 class=""><?php echo $showToko['toko_nama'] ?></h5>
                     </div>
                     <div>
-                        <img src="<?php echo base_url() ?>assets/expo_img/store_img/19197204.jpg" alt="" class="img-fluid rounded" width="150">
+                        <?php if($showToko['toko_logo'] == ''){ ?>
+                            <img src="<?php echo base_url() ?>assets/expo_img/19197204.jpg" alt="" class="img-fluid rounded" width="150">
+                        <?php } else { ?>
+                            <img src="<?php echo base_url().'/'.$showToko['toko_logo'] ?>" alt="" class="img-fluid rounded" width="150">
+                        <?php } ?>
                         <table class="table">
                             <tr>
                                 <td>Owner</td>
                                 <td>:</td>
-                                <td><?php echo $showToko['toko_owner'] ?></td>
+                                <td style="font-size:15px;"><?php echo $showToko['toko_owner'] ?></td>
                             </tr>
                             <tr>
-                                <td>WA</td>
-                                <td>:</td>
-                                <td><p><?php echo $showToko['toko_kontak'] ?></p></td>
-                            </tr>
-                            <tr>
-                                <td colspan="3"><?php echo $showToko['toko_alamat'] ?></td>
+                                <td colspan="3" style="font-size:12px;"><?php echo $showToko['toko_alamat'] ?></td>
                             </tr>
                         </table>
                     </div>
@@ -30,7 +31,14 @@
                     </div>
                 </div>
             </div>
-        <?php endforeach; ?>
+        <?php 
+            endforeach;
+          } else {
+        ?>
+            <div class="col-12 mt-3">
+                <div class="alert alert-danger border border-dark border-rounded"> Belum ada toko pada kategori ini ! </div>
+            </div>
+        <?php } ?>
       </div>
     </div>
 </div>

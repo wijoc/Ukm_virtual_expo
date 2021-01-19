@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-2 col-sm-6">
                     <?php if($dataToko[0]['toko_logo'] == ''){ ?>
-                        <img src="<?php echo base_url() ?>assets/expo_img/store_img/19197204.jpg" alt="" class="img-fluid rounded float-left border-right" width="150">
+                        <img src="<?php echo base_url() ?>assets/expo_img/19197204.jpg" alt="" class="img-fluid rounded float-left border-right" width="150">
                     <?php } else { ?>
                         <img src="<?php echo base_url().'/'.$dataToko['0']['toko_logo'] ?>" alt="" class="img-fluid rounded float-left border-right" width="150">
                     <?php } ?>
@@ -20,7 +20,9 @@
             </div>
         </div>
         <div class="row">
-            <?php foreach($dataProduk as $showPrd): ?>
+            <?php
+              if(count($dataProduk) > 0){ 
+                foreach($dataProduk as $showPrd): ?>
                 <div class="col-lg-4 col-md-6 mt-3">
                     <div class="card border border-dark border-rounded">
                         <div class="row no-gutters">
@@ -28,12 +30,12 @@
                                 <?php if($showPrd['prd_thumbnail'] == ''){ ?>
                                     <img src="<?php echo base_url().'/assets/expo_img/nopoto.png' ?>" height="210" width="163" alt="">
                                 <?php } else { ?>
-                                    <img src="<?php echo base_url().'/'.$showPrd['prd_thumbnail'] ?>" height="210" width="163" alt="">
+                                    <img src="<?php echo base_url().$showPrd['prd_thumbnail'] ?>" height="210" width="163" alt="">
                                 <?php } ?>
                             </div>
                             <div class="col-md-7">
                                 <div class="card-block px-2">
-                                    <h4 class="card-title mt-3 pl-2"><?php echo $showPrd['prd_nama'] ?></h4>
+                                    <h6 class="card-title mt-1 pl-2"><?php echo $showPrd['prd_nama'] ?></h6>
                                     <hr>
                                     <p>Rp. <?php echo number_format($showPrd['prd_harga']) ?>.-</p>
                                 </div>
@@ -51,7 +53,14 @@
                         </div>
                     </div>
                 </div>
-            <?php endforeach; ?>
+            <?php 
+                endforeach;
+              } else {  
+            ?>
+                <div class="col-12 mt-3">
+                    <div class="alert alert-danger border border-dark border-rounded"> Toko belum memiliki produk </div>
+                </div>
+            <?php } ?>
         </div>
     </div>
 </div>

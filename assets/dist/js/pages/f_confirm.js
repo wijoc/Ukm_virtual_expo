@@ -14,6 +14,10 @@ function confirmDelete(item, getid, url, msg){
 			var warningMsg = "Penghapusan data bersifat permanen !  Data produk yang terhapus tidak bisa dipulihkan !";
 			var cancelMsg  = "Batal menghapus data produk !";
 			break;
+		case "stream":
+			var warningMsg = "Penghapusan data bersifat permanen !  Data livestream yang terhapus tidak bisa dipulihkan !";
+			var cancelMsg  = "Batal menghapus data livestream !";
+			break;
 		default :
 			var warningMsg = msg;
 			var cancelMsg  = "Batal menghapus data !";

@@ -39,6 +39,11 @@
 		<script src="<?php echo base_url() ?>assets/dist/js/pages/admin_prd.js"></script>
 	<?php } ?>
 
+	<!-- Page Stream -->
+	<?php if(in_array('stream_page',$assets)){ ?>
+		<script src="<?php echo base_url() ?>assets/dist/js/pages/admin_stream.js"></script>
+	<?php } ?>
+
 	<!-- Page Konfirmasi Delete -->
 	<?php if(in_array('func_confirm', $assets)){ ?>
 		<script type="text/javascript" src="<?php echo base_url() ?>assets/dist/js/pages/f_confirm.js"></script>

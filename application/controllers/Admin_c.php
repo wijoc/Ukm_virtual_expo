@@ -10,17 +10,21 @@ Class Admin_c extends MY_Controller {
 
     /** Halaman Dashboard admin */
         public function index(){
-            /* Data yang akan dikirim ke view */
-            $this->pageData = array(
-                'title'  => 'Admin | Rembang Expo',
-                'assets' => array()
-            ); 
-    
-            /* View file */
-            $this->page = "admin/dashboard_v";
-    
-            /* Call function layout dari MY_Controller Class */
-            $this->admin_layout();
+            if($this->session->userdata('authStatus') == 'logedIn'){
+                /* Data yang akan dikirim ke view */
+                $this->pageData = array(
+                    'title'  => 'Admin | Rembang Expo',
+                    'assets' => array('sweetalert2','dashboard')
+                ); 
+        
+                /* View file */
+                $this->page = "admin/dashboard_v";
+        
+                /* Call function layout dari MY_Controller Class */
+                $this->admin_layout();
+            } else {
+                redirect('Auth');
+            }
         }
 
     /** CRUD Data Kategori */

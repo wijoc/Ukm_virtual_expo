@@ -44,6 +44,11 @@
 		<script src="<?php echo base_url() ?>assets/dist/js/pages/admin_stream.js"></script>
 	<?php } ?>
 
+	<!-- dashboard -->
+	<?php if(in_array('dashboard',$assets)){ ?>
+		<script src="<?php echo base_url() ?>assets/dist/js/pages/admin_dashboard.js"></script>
+	<?php } ?>
+
 	<!-- Page Konfirmasi Delete -->
 	<?php if(in_array('func_confirm', $assets)){ ?>
 		<script type="text/javascript" src="<?php echo base_url() ?>assets/dist/js/pages/f_confirm.js"></script>
@@ -59,6 +64,10 @@
 		<?php } ?>
 		<?php if($this->session->flashdata('flashRedirect')){ ?> // Khusus page kategori & Satuan 
 			var site_url = "<?php echo site_url($this->session->flashdata('flashRedirect')) ?>";
+		<?php } ?>
+		<?php if($this->session->userdata('authStatus')){ ?> // Khusus page kategori & Satuan 
+			var authStatus = "<?php echo $this->session->userdata('authStatus') ?>"; 
+			var authUser = "<?php echo $this->session->userdata('authUser') ?>";
 		<?php } ?>
 	</script>
 <?php } ?>

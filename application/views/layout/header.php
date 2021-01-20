@@ -25,10 +25,10 @@
         <a href="index3.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Kategori</a>
+        <a href="#" class="nav-link">Toko</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Stream</a>
+        <a href="<?php echo site_url('Auth/logoutProses') ?>" class="nav-link">Logout</a>
       </li>
     </ul>
   </nav>

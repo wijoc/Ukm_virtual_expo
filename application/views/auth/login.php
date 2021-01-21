@@ -14,11 +14,22 @@
   <!-- icheck bootstrap -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/dist/css/adminlte.css">
   <!-- SweetAlert2 -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <!-- extra -->
+    <style>
+      body {
+        background-image: url('<?php echo base_url() ?>assets/visitor/images/bg-expo-rembang.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+    </style>
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">

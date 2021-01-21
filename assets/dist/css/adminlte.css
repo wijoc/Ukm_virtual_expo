@@ -66,7 +66,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #ffffff;
+  /** background-color: #ffffff; */
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -20206,7 +20206,7 @@ html.maximized-card {
 .register-page {
   -ms-flex-align: center;
   align-items: center;
-  background: #e9ecef;
+  /* background: #e9ecef; */
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -20219,6 +20219,11 @@ html.maximized-card {
 .login-box,
 .register-box {
   width: 360px;
+  background-color: rgba(111, 112, 117, 1);
+}
+
+.login-box a {
+  color : white;
 }
 
 @media (max-width: 576px) {
